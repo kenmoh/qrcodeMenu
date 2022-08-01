@@ -14,7 +14,7 @@ h1 {
   font-family: Pacifico, cursive;
   margin-bottom: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(180, 155, 9);
   text-transform: capitalize;
   letter-spacing: 5px;
@@ -25,7 +25,7 @@ h3 {
   letter-spacing: 2px;
   font-weight: bold;
   color: rgb(180, 155, 9);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 p {
