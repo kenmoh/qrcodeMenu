@@ -1,39 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h2>Main Course</h2>
-    {% for menu in menus %}
-    <!-- ----------- -->
-    {% if menu.category.category_name == 'Main Course' %}
-    <!-- ----------- -->
-    <p>{{ menu.item_name }} {{ menu.item_price }}</p>
-    {% endif %}
-    <!-- ---------- -->
-    {% endfor %}
-    <h2>Mocktail</h2>
-    {% for menu in menus %}
-    <!-- ----------- -->
-    {% if menu.category.category_name == 'Mocktail' %}
-    <!-- ----------- -->
-    <p>{{ menu.item_name }} {{ menu.item_price }}</p>
-    {% endif %}
-    <!-- ---------- -->
-    {% endfor %}
-    <h2>Cocktail</h2>
-    {% for menu in menus %}
-    <!-- ----------- -->
-    {% if menu.category.category_name == 'Cocktail' %}
-    <!-- ----------- -->
-    <p>{{ menu.item_name }} {{ menu.item_price }}</p>
-    {% endif %}
-    <!-- ---------- -->
-    {% endfor %}
-    <a href="{% url 'generate-pdf' %}">Generate PDF</a>
-  </body>
-</html>
+{% extends 'menu/base.html' %}
+
+<!-- ------- -->
+{% block content %}
+
+<section class="menu_body">
+  <h1>starter</h1>
+  {% for menu in menus %}
+  <!-- ----------- -->
+  {% if menu.category.category_name == 'Starter' %}
+  <!-- ----------- -->
+  <div class="menu">
+    <div class="menu_head">
+      <h3>{{ menu.item_name }}</h3>
+      <h3>{{ menu.item_price }}</h3>
+    </div>
+    <div class="menu_description">
+      <p>{{ menu.item_description }}</p>
+    </div>
+  </div>
+  {% endif %}
+  <!-- ---------- -->
+  {% endfor %}
+  <h1>main course</h1>
+  {% for menu in menus %}
+  <!-- ----------- -->
+  {% if menu.category.category_name == 'Main Course' %}
+  <!-- ----------- -->
+  <div class="menu">
+    <div class="menu_head">
+      <h3>{{ menu.item_name }}</h3>
+      <h3>{{ menu.item_price }}</h3>
+    </div>
+    <div class="menu_description">
+      <p>{{ menu.item_description }}</p>
+    </div>
+  </div>
+  {% endif %}
+  <!-- ---------- -->
+  {% endfor %}
+  <!-- ---------- -->
+  {% for menu in menus %}
+  <!-- ----------- -->
+  {% if menu.category.category_name == 'Mocktail' %}
+  <h1>mocktail</h1>
+  <!-- ----------- -->
+  <div class="menu">
+    <div class="menu_head">
+      <h3>{{ menu.item_name }}</h3>
+      <h3>{{ menu.item_price }}</h3>
+    </div>
+    <div class="menu_description">
+      <p>{{ menu.item_description }}</p>
+    </div>
+  </div>
+  {% endif %}
+  <!-- ---------- -->
+  {% endfor %}
+  <h1>cocktail</h1>
+  {% for menu in menus %}
+  <!-- ----------- -->
+  {% if menu.category.category_name == 'Cocktail' %}
+  <!-- ----------- -->
+  <div class="menu">
+    <div class="menu_head">
+      <h3>{{ menu.item_name }}</h3>
+      <h3>{{ menu.item_price }}</h3>
+    </div>
+    <div class="menu_description">
+      <p>{{ menu.item_description }}</p>
+    </div>
+  </div>
+  {% endif %}
+  <!-- ---------- -->
+  {% endfor %}
+  <!-- ---------- -->
+  <a href="{% url 'generate-pdf' %}">Generate pdf</a>
+</section>
+{% endblock content %}

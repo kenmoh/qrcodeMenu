@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: Pacifico, cursive;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(180, 155, 9);
+  text-transform: capitalize;
+  letter-spacing: 5px;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: rgb(180, 155, 9);
+  font-size: 16px;
+}
+
+p {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.bg {
+  background: #031924;
+  color: white;
+}
+
+.container {
+  width: 55%;
+  background: #023047;
+  margin: 35px auto;
+}
+
+.menu_body {
+  padding: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.menu_head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.menu_description {
+  width: 70%;
+}
+
+.title {
+  width: 50%;
+  margin: 0 auto;
+}
